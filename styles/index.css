@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --mainFont: 'Roboto', sans-serif;
+    --backGroundColor: linear-gradient(#FFD3A5, #FD6585);
+    --mainColor: #fbc02d;
+    --primaryColor: #ecc133;
+    --lightColor: #ffff;
+    --lightColorGlass: rgba(255, 255, 255, 0.527);
+    --darkColor: #28303f;
+    --darkColorLight: #28303f85;
+    --questFontSize: 30px;
+    --answerFontSize: 16px;
+}
+
+*>* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: var(--mainFont);
+    height: 100vh;
+    background-color: var(--darkColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: var(--lightColor);
+    height: 60vh;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+}
+
+.content {
+    padding: 0 40px;
+    height: 100%;
+}
+
+.inp_search {
+    width: 70%;
+    margin-bottom: 40px;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.inp_search input {
+    width: 90%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    padding: 15px 20px;
+    border-radius: inherit;
+    background-color: var(--mainColor);
+    font-size: 1rem;
+    font-family: var(--mainFont);
+    font-weight: 500;
+    color: var(--darkColor);
+}
+
+.inp_search input::placeholder {
+    color: var(--darkColorLight);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.tasks {
+    width: 70%;
+    display: flex;
+    background-color: var(--darkColor);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+.task {
+    width: 80%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    word-wrap: break-word;
+}
+
+.task h3 {
+    font-size: 1rem;
+    color: var(--primaryColor);
+    margin-bottom: 5px;
+}
+
+.task span {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 90%;
+    color: var(--lightColor);
+}
+
+.controlls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+    align-items: center;
+    width: 20%;
+}
+
+.controlls img {
+    margin: 0 5px;
+}
+
+.slide {
+    height: 70%;
+    overflow: auto;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn button {
+    padding: 0 40px;
+    background-color: var(--darkColor);
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+
+.add_data,
+.add_data_2 {
+    width: 40%;
+    height: 35vh;
+    position: absolute;
+    top: 50%;
+    left: -200%;
+    transform: translate(-50%, -50%);
+    background-color: var(--mainColor);
+    padding: 20px 0px;
+    border-radius: 10px;
+    transition: left .5s ease-in-out;
+}
+
+.hidde {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 2rem;
+    color: var(--darkColor);
+    cursor: pointer;
+}
+
+.pd,
+.pd_2 {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+}
+
+.add_data .pd textarea {
+    position: relative;
+    resize: none;
+    padding: 20px;
+    color: var(--darkColor);
+}
+
+.add_data_2 .pd_2 textarea {
+    position: relative;
+    resize: none;
+    padding: 20px;
+    color: var(--darkColor);
+}
+
+.add_data .pd input {
+    padding: 15px 20px;
+    color: var(--darkColor);
+}
+
+.add_data_2 .pd_2 input {
+    padding: 15px 20px;
+    color: var(--darkColor);
+}
+
+.add_data,
+.add_data_2 .pd,
+.pd_2 textarea::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--darkColorLight);
+}
+
+.add_data .pd button {
+    background-color: var(--darkColor);
+}
+
+.add_data_2 .pd_2 button {
+    background-color: var(--darkColor);
+}
+
+img,
+button,
+input {
+    cursor: pointer;
+}
+
+button,
+input,
+textarea {
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: var(--mainFont);
+    user-select: all;
+}
+
+.bluer,
+.bluer_2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    backdrop-filter: blur(10px);
+}
+
+.un_active {
+    color: var(--lightColorGlass) !important;
+    text-decoration: line-through !important;
+}
+
+.tasks_info {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks_info span {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:600px) {
+
+    .container {
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .slide {
+        width: 100%;
+        height: 80%;
+        overflow: auto;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .tasks {
+        width: 100%;
+    }
+
+    .inp_search {
+        width: 95%;
+    }
+
+    .tasks_info {
+        position: absolute;
+        left: 10%;
+        top: 90%;
+    }
+
+    .add_data,
+    .add_data_2 {
+        width: 85%;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo-App</title>
+        <!-- ---- Links ------ -->
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="tasks_info">
+                <span class="task_num">0/0</span>
+            </div>
+            <div class="content">
+                <div class="inp_search">
+                    <input type="search" placeholder="search.....">
+                    <img src="./icons/search.svg" alt="" width="25px" height="25px">
+                </div>
+                <div class="slide">
+                    <!-- It will come form js line {22} -->
+                </div>
+                <div class="btn">
+                    <button>
+                        <img src="./icons/add.svg" alt="" width="50px" height="50px">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bluer">
+            <div class="add_data">
+                <div class="pd">
+                    <h2>Add Task</h2>
+                    <input type="text" name="" id="" placeholder="Task Name">
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Description" draggable="none"></textarea>
+                    <button class="set_data" type="submit">
+                        <img src="./icons/add.svg" alt="" width="50px" height="50px">
+                    </button>
+                    <span class="hidde">X</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bluer_2">
+            <div class="add_data_2">
+                <div class="pd_2">
+                    <h2>Edit Your Task</h2>
+                    <input type="text" name="" id="" placeholder="Task Name">
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Description" draggable="none"></textarea>
+                    <button class="set_data_2" type="submit">
+                        <img src="./icons/edit.svg" alt="" width="50px" height="50px">
+                    </button>
+                    <span class="hidde">X</span>
+                </div>
+            </div>
+        </div>
+        <script src="./scripts/index.js"></script>
+    </body>
+
+</html>
